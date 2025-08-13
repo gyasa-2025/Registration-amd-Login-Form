@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Defines the document type and sets the language to English -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Sets the character encoding to UTF-8 for proper text display -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures the webpage is responsive and adjusts to different screen sizes -->
+
+    <title>Registration Form</title>
+    <!-- Sets the title of the webpage -->
+
+    <link rel="stylesheet" href="formstyles.css">
+    <!-- Links an external CSS file for styling -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Links Font Awesome for icons -->
+</head>
+
+<body>
+
+    <div class="container" id="Login">
+        <!-- Container div for the registration form section -->
+        
+        <img src="unnamed.jpg" alt="School logo" class="logo" style="display: block; margin: 0 auto; width: 120px; height: auto;">
+        <!-- Displays the school logo, centered -->
+
+        <h1 class="form-title">Registration Form</h1>
+        <!-- Title of the registration form -->
+
+        <form method="POST" action="process.php">
+            <!-- Defines the form, which sends data to process.php using the POST method -->
+
+            <label for="name" class="input-group">
+                <i class="fas fa-user"></i>
+                <!-- Icon for username input -->
+                <input type="text" name="name" id="name" placeholder="Username" required>
+                <!-- Input field for username -->
+            </label>
+
+            <label for="phone" class="input-group">
+                <i class="fas fa-phone"></i>
+                <!-- Icon for phone input -->
+                <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+                <!-- Input field for phone number -->
+            </label>
+
+            <label for="email" class="input-group">
+                <i class="fas fa-envelope"></i>
+                <!-- Icon for email input -->
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <!-- Input field for email -->
+            </label>
+
+            <label for="password" class="input-group password">
+                <i class="fas fa-lock"></i>
+                <!-- Icon for password input -->
+                <input type="password" name="password" id="password" placeholder="Password">
+                <!-- Input field for password -->
+                <i id="eye" class="fa fa-eye"></i>
+                <!-- Eye icon for showing/hiding password (JavaScript handles functionality) -->
+            </label>
+
+            <label for="confirm_password" class="input-group">
+                <i class="fas fa-lock"></i>
+                <!-- Icon for confirm password input -->
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+                <!-- Input field for confirming password -->
+            </label>
+
+            <div class="button-group">
+                <!-- Container for form buttons -->
+                <input type="submit" class="btn" value="Submit" name="submit">
+                <!-- Submit button -->
+                <input type="reset" class="btn clear" value="Clear">
+                <!-- Reset button to clear form fields -->
+            </div>
+        </form>
+
+        <div class="links">
+            <!-- Container for login links -->
+            <p>Registered Already!</p>
+            <a href="Login.php">Login</a>
+            <!-- Link to login page -->
+        </div>
+    </div>
+
+    <footer>
+        <!-- Footer section -->
+        <p>&copy; 2025 Group1. All rights reserved.</p>
+    </footer>
+
+    <script src="errorhandling.js"></script>
+    <!-- Links an external JavaScript file for error handling -->
+
+</body>
+
+</html>

@@ -1,0 +1,292 @@
+/* Reset styles to remove default margins, paddings, and ensure consistent box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Set global font */
+}
+
+/* Background Styling */
+body {
+    background: #ccd1d1; /* Light grayish background for better contrast */
+}
+
+/* Centered Form Box */
+.container {
+    background: #fff; /* White background for the form */
+    width: 450px; /* Fixed width to maintain design consistency */
+    padding: 1.5rem;
+    margin: 50px auto; /* Centers the form horizontally */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.6); /* Soft shadow for depth */
+    position: relative; /* For absolute positioning of inner elements */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    font-size: 14px;
+}
+
+/* Form Styling */
+form {
+    margin: 0 2rem; /* Adds space around the form */
+}
+
+/* Form Title */
+.form-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 1.3rem;
+    margin-bottom: 0.4rem;
+}
+
+/* Input Fields */
+input {
+    flex: 10; /* Allow input to take most of the space */
+    color: inherit; /* Inherits text color */
+    width: 100%;
+    background-color: transparent; /* Removes background color */
+    border: none; /* Removes default borders */
+    font-size: 15px;
+    padding: 0 0.4em;
+    border-left: solid 1px hsla(0, 0%, 0%, 0.4); /* Light left border */
+}
+
+/* Focus effect for inputs */
+input:focus {
+    border-left: solid 1px hsla(240, 73%, 71%, 1); /* Changes left border color */
+    outline: none; /* Removes default focus outline */
+}
+
+/* Input Group Container */
+.input-group {
+    padding: 1% 0;
+    position: relative;
+    background-color: hsla(227, 63%, 18%, 0.07); /* Subtle background tint */
+    margin: 1em auto;
+    border-radius: 12px; /* Rounded corners */
+    display: flex;
+    padding: 0.7em 0.1em;
+}
+
+/* Error Message Styling */
+.error {
+    position: absolute;
+    left: 2em;
+    bottom: -1em;
+}
+
+.error p {
+    color: red;
+    font-weight: 500;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Change border color when input is focused */
+.input-group:focus-within {
+    border: 1.5px solid rgb(125, 125, 235);
+}
+
+/* Icons inside input fields */
+.input-group i {
+    flex: 1;
+    color: #f7cb07; /* Default color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Change icon color on focus */
+.input-group:focus-within i {
+    color: rgb(125, 125, 235);
+}
+
+/* Adjust first icon's flex size in password input */
+.input-group.password i:first-child {
+    flex: 1.1;
+}
+
+/* Password Recovery Link */
+.recover {
+    text-align: right;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.recover a {
+    text-decoration: none;
+    color: rgb(125, 125, 235);
+}
+
+.recover a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* Submit and Reset Buttons */
+.btn {
+    font-size: 1.1rem;
+    padding: 0.6em 0;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    width: 100%;
+    background: rgb(125, 125, 235);
+    color: #f7cb07;
+    cursor: pointer;
+    transition: 0.9s;
+    margin-top: 0.4em;
+    font-weight: 600;
+}
+
+/* Button Hover Effect */
+.btn:hover {
+    background: #07001f;
+    color: #54b1f1;
+}
+
+/* Social Icons */
+.icons {
+    text-align: center;
+}
+
+/* Icon Hover Effect */
+.icons i:hover {
+    background: #07001f;
+    font-size: 1.6rem;
+    border: 2px solid rgb(125, 125, 235);
+}
+
+/* Navigation Links */
+.links {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 4rem;
+    margin-top: 0.9rem;
+    font-weight: bold;
+}
+
+/* Button Styling */
+button {
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Button Hover Effect */
+button:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+/* Error Message Container */
+.error-main {
+    background-color: brown;
+    padding: 0.5em 1em;
+    border-radius: 12px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Error Message Text */
+.error-main p {
+    color: white;
+    text-align: center;
+}
+
+/* User Details Section */
+.user-details {
+    margin-top: 5em;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+/* User Details Text */
+.user-details p {
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+/* First User Detail with Underline */
+.user-details p:first-child {
+    text-decoration: underline;
+    margin-bottom: 2em;
+    font-weight: 600;
+}
+
+/* User Details Link */
+.user-details a {
+    display: block;
+    text-align: center;
+    text-decoration-color: rgb(125, 125, 235);
+    color: rgb(125, 125, 235);
+    transition: 5ms;
+}
+
+/* User Details Link Hover Effect */
+.user-details a:hover {
+    color: blue;
+    text-decoration-color: blue;
+}
+
+/* Responsive Design Adjustments */
+@media screen and (max-width: 767px) {
+    .container {
+        box-shadow: unset; /* Removes shadow for smaller screens */
+    }
+
+    /* Error message adjustments */
+    .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+}
+.login-text {
+    color: blue;
+    font-style: italic;
+    text-align: center;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.warning-icon {
+    color: red;
+    font-size: 40px;
+    display: block;
+    margin: 10px auto;
+}
+
+.modal-content {
+   
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+   color: blue;
+border: none;
+    cursor: pointer;
+    padding: 20px;
+}
+.error {
+    color: red;
+    font-weight: bold;
+}
+
